@@ -81,9 +81,10 @@ class Solution:
             else:
                 nums1[pointer_output] = nums2[pointer2] # unless the last value of nums2 is > than that of nums1
                 pointer2 -= 1 # iterate down the array until 0 is reached
-                
+
             pointer_output -=1
 
-
+        # any remaining elements in nums2, copy them via slice
+        nums1[:pointer2 + 1] = nums2[:pointer2 + 1]
 
         
