@@ -49,11 +49,21 @@
 #     0 <= val <= 100
 
 class Solution:
-    def removeElement(self, nums: List[int], val: int) -> int:
+    def removeElement(self, nums: list[int], val: int) -> int:
         k = 0  # set index for element that is not val
         for i in range(len(nums)): # since iterating, use index loop to base k
             if nums[i] != val: # if the element at index i is not the val
                 nums[k] = nums[i] # reassign element at index 0 with value at index i
                 k += 1 
         return k
-               
+
+nums = [3, 2, 2, 3]
+val = 3
+solution = Solution()  
+result = solution.removeElement(nums, val)  
+print(f"Result = {result}")  
+
+# nums = [0, 1, 2, 2, 3, 0, 4, 2]
+# val = 2
+# result = solution.removeElement(nums, val)
+# print(f"Output result = {result}")
