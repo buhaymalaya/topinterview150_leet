@@ -61,9 +61,9 @@ nums = [3, 2, 2, 3]
 val = 3
 solution = Solution()  
 result = solution.removeElement(nums, val)  
-print(f"Result = {result}")  
+print(f"Result = {result}, nums = {nums[:result]}")  
 
-# nums = [0, 1, 2, 2, 3, 0, 4, 2]
-# val = 2
-# result = solution.removeElement(nums, val)
-# print(f"Output result = {result}")
+nums = [0, 1, 2, 2, 3, 0, 4, 2]
+val = 2
+result = solution.removeElement(nums, val)
+print(f"Output result = {result}, nums = {nums[:result]}")
