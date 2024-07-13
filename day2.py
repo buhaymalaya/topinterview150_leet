@@ -56,4 +56,5 @@
 class Solution:
     def removeElement(self, nums: List[int], val: int) -> int:
         k = 0  # set index for element that is not val
-        
+        for i in range(len(nums)): # since iterating, use index loop to base k
+            
