@@ -57,4 +57,7 @@ class Solution:
     def removeElement(self, nums: List[int], val: int) -> int:
         k = 0  # set index for element that is not val
         for i in range(len(nums)): # since iterating, use index loop to base k
-            
+            if nums[i] != val: # if the element at index i is not the val
+                nums[k] = nums[i] # reassign element at index 0 with value at index i
+                
+               
