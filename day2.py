@@ -1,7 +1,6 @@
 # 27. Remove Element
 # Easy
 
-
 # Given an integer array nums and an integer val, remove all occurrences of val in nums in-place. The order of the elements may be changed. Then return the number of elements in nums which are not equal to val.
 
 # Consider the number of elements in nums which are not equal to val be k, to get accepted, you need to do the following things:
@@ -28,8 +27,6 @@
 
 # If all assertions pass, then your solution will be accepted.
 
- 
-
 # Example 1:
 
 # Input: nums = [3,2,2,3], val = 3
@@ -45,8 +42,6 @@
 # Note that the five elements can be returned in any order.
 # It does not matter what you leave beyond the returned k (hence they are underscores).
 
- 
-
 # Constraints:
 
 #     0 <= nums.length <= 100
@@ -59,5 +54,6 @@ class Solution:
         for i in range(len(nums)): # since iterating, use index loop to base k
             if nums[i] != val: # if the element at index i is not the val
                 nums[k] = nums[i] # reassign element at index 0 with value at index i
-                
+                k += 1 
+        return k
                
