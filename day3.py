@@ -1,8 +1,5 @@
 # 26. Remove Duplicates from Sorted Array
-# Easy
-# Topics
-# Companies
-# Hint
+
 
 # Given an integer array nums sorted in non-decreasing order,
 # remove the duplicates in-place such that each unique element appears only once. 
@@ -56,3 +53,6 @@
 
 class Solution:
     def removeDuplicates(self, nums: List[int]) -> int:
+        if not nums:
+            return 0
+
