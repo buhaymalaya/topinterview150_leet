@@ -60,4 +60,8 @@ class Solution:
         
         for x in range(1, len(nums)):
             if nums[x] != nums[i]: # meaning if they are not the same value/element
-              
+        
+                i += 1 # increment up to the next position, from 0 to 1 .. 1 to 2
+                nums[i] = nums[x] # move to next unique position
+
+        return i + 1
