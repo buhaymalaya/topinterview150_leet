@@ -58,4 +58,6 @@ class Solution:
         
         i = 0 # first pointer
         
-        
+        for x in range(1, len(nums)):
+            if nums[x] != nums[i]: # meaning if they are not the same value/element
+              
