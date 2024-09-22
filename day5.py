@@ -24,3 +24,7 @@
 
 #     1 <= prices.length <= 105
 #     0 <= prices[i] <= 104
+
+class Solution:
+    def maxProfit(self, prices: List[int]) -> int:
+        
