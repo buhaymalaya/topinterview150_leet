@@ -54,3 +54,18 @@
 # Skip over additional duplicates beyond the second occurrence.
 
 
+class Solution:
+    def removeDuplicates(self, nums: List[int]) -> int:
+        if len(nums) <= 2:
+            return len(nums)
+        
+        # start with the first two elements (since we are allowed two occurrences).
+        slow = 2
+        
+        for fast in range(2, len(nums)):
+            # compare current element with the element two positions back.
+            if nums[fast] != nums[slow - 2]:
+                nums[slow] = nums[fast]
+                slow += 1
+                
+        return slow
