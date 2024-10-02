@@ -66,3 +66,10 @@ class Solution:
 
         return i + 1
 
+if __name__ == "__main__":
+    solution = Solution()
+
+    # Test case 1: Simple case with duplicates
+    nums1 = [1, 1, 2]
+    k1 = solution.removeDuplicates(nums1)
+    print(f"Test case 1: k = {k1}, nums = {nums1[:k1]}")
