@@ -88,3 +88,24 @@ if __name__ == "__main__":
 # O(n) since we're iterating through the array once, where n is the length of nums.
 # Space Complexity:
 # O(1) since we are modifying the array in place without using any additional data structures.
+
+# alternate solution
+
+class Solution:
+    def removeDuplicates(self, nums: list[int]) -> int:
+        if len(nums) <= 2:
+            return len(nums)
+
+        # initialize a pointer to store the position of the next unique element
+        j = 1
+        
+        # iterate through the list starting from the second element
+        for i in range(2, len(nums)):
+            # if the current element is different from the element two places back
+            if nums[i] != nums[j - 1]:
+                j += 1  # move the pointer forward
+                nums[j] = nums[i]  # place the current element in the next valid position
+
+        return j + 1
+
+
