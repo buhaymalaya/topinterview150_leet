@@ -83,3 +83,8 @@ if __name__ == "__main__":
     nums2 = [0,0,1,1,1,1,2,3,3]
     k2 = solution.removeDuplicates(nums2)
     print(f"Output for nums2: {nums2[:k2]}, k = {k2}")
+
+# Time Complexity:
+# O(n) since we're iterating through the array once, where n is the length of nums.
+# Space Complexity:
+# O(1) since we are modifying the array in place without using any additional data structures.
