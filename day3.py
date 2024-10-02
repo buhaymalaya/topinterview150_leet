@@ -88,3 +88,8 @@ if __name__ == "__main__":
     nums4 = [1, 1, 1, 1, 1]
     k4 = solution.removeDuplicates(nums4)
     print(f"Test case 4: k = {k4}, nums = {nums4[:k4]}")
+
+ # test case 5: Array with a single element
+    nums5 = [1]
+    k5 = solution.removeDuplicates(nums5)
+    print(f"Test case 5: k = {k5}, nums = {nums5[:k5]}")
