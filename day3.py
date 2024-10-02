@@ -78,3 +78,8 @@ if __name__ == "__main__":
     nums2 = [0, 0, 1, 1, 1, 2, 2, 3, 3, 4]
     k2 = solution.removeDuplicates(nums2)
     print(f"Test case 2: k = {k2}, nums = {nums2[:k2]}")
+
+# test case 3: No duplicates in the array
+    nums3 = [1, 2, 3, 4, 5]
+    k3 = solution.removeDuplicates(nums3)
+    print(f"Test case 3: k = {k3}, nums = {nums3[:k3]}")
