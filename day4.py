@@ -45,3 +45,12 @@
 # class Solution:
 #     def removeDuplicates(self, nums: List[int]) -> int:
         
+# modify the array in-place and ensure that each unique element appears at most twice. use a two-pointer technique to achieve this with O(1) extra space:
+
+# Plan:
+# Use a slow pointer to track the index where the next valid element should be placed.
+# Use a fast pointer to iterate through the array.
+# For each element, if it is the first or second occurrence, copy it to the position indicated by slow and increment slow.
+# Skip over additional duplicates beyond the second occurrence.
+
+
