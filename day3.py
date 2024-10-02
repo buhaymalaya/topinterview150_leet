@@ -83,3 +83,8 @@ if __name__ == "__main__":
     nums3 = [1, 2, 3, 4, 5]
     k3 = solution.removeDuplicates(nums3)
     print(f"Test case 3: k = {k3}, nums = {nums3[:k3]}")
+
+ # test case 4: All elements are the same
+    nums4 = [1, 1, 1, 1, 1]
+    k4 = solution.removeDuplicates(nums4)
+    print(f"Test case 4: k = {k4}, nums = {nums4[:k4]}")
