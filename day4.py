@@ -55,7 +55,7 @@
 
 
 class Solution:
-    def removeDuplicates(self, nums: List[int]) -> int:
+    def removeDuplicates(self, nums: list[int]) -> int:
         if len(nums) <= 2:
             return len(nums)
         
@@ -69,3 +69,17 @@ class Solution:
                 slow += 1
                 
         return slow
+
+if __name__ == "__main__":
+    # create an instance of the Solution class
+    solution = Solution()
+
+    # test case 1
+    nums1 = [1,1,1,2,2,3]
+    k1 = solution.removeDuplicates(nums1)
+    print(f"Output for nums1: {nums1[:k1]}, k = {k1}")
+
+    # test case 2
+    nums2 = [0,0,1,1,1,1,2,3,3]
+    k2 = solution.removeDuplicates(nums2)
+    print(f"Output for nums2: {nums2[:k2]}, k = {k2}")
