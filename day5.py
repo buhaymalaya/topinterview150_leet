@@ -35,4 +35,7 @@ class Solution:
         for price in prices:
             # Update min_price to the lowest price seen so far
             min_price = min(min_price, price)
-        
+             # Calculate profit if sold at current price
+            profit = price - min_price
+            # Update max_profit if this profit is higher than current max_profit
+            max_profit = max(max_profit, profit)
