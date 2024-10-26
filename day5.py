@@ -39,3 +39,5 @@ class Solution:
             profit = price - min_price
             # Update max_profit if this profit is higher than current max_profit
             max_profit = max(max_profit, profit)
+
+        return max_profit
