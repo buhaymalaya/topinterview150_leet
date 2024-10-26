@@ -41,3 +41,6 @@ class Solution:
             max_profit = max(max_profit, profit)
 
         return max_profit
+    
+    # Create an instance of the Solution class
+solution = Solution()
