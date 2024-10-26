@@ -65,4 +65,9 @@ class Solution:
         # Iterate with the right pointer starting from the second day
         for right in range(1, len(prices)):
             # If current price is less than the price at the buy pointer, move left to right
-           
+            if prices[right] < prices[left]:
+                left = right
+            else:
+                # Calculate profit and update max_profit if it's higher
+                profit = prices[right] - prices[left]
+                max_profit = max(max_profit, profit)
