@@ -31,4 +31,8 @@ class Solution:
     def maxProfit(self, prices: List[int]) -> int:
         min_price = float('inf')
         max_profit = 0
+
+        for price in prices:
+            # Update min_price to the lowest price seen so far
+            min_price = min(min_price, price)
         
