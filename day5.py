@@ -71,3 +71,5 @@ class Solution:
                 # Calculate profit and update max_profit if it's higher
                 profit = prices[right] - prices[left]
                 max_profit = max(max_profit, profit)
+
+        return max_profit
