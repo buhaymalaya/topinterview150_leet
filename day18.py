@@ -41,3 +41,4 @@
 # Use the strip function (or equivalent) to remove unnecessary spaces at the beginning and end of the string.
 # Split the string into words: Use the split method to break the string into a list of words. By default, it handles multiple spaces correctly.
 # Reverse the list of words: Reverse the order of words using slicing or the reverse method.
+# Join the words with a single space: Use the join method to concatenate the reversed words into a single string separated by spaces.
