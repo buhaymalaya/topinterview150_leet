@@ -40,3 +40,4 @@
 
 # Use the strip function (or equivalent) to remove unnecessary spaces at the beginning and end of the string.
 # Split the string into words: Use the split method to break the string into a list of words. By default, it handles multiple spaces correctly.
+# Reverse the list of words: Reverse the order of words using slicing or the reverse method.
