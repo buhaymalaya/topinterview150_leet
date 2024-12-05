@@ -36,3 +36,6 @@
  
 
 # Follow-up: If the string data type is mutable in your language, can you solve it in-place with O(1) extra space?
+
+
+# Use the strip function (or equivalent) to remove unnecessary spaces at the beginning and end of the string.
