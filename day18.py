@@ -42,3 +42,16 @@
 # Split the string into words: Use the split method to break the string into a list of words. By default, it handles multiple spaces correctly.
 # Reverse the list of words: Reverse the order of words using slicing or the reverse method.
 # Join the words with a single space: Use the join method to concatenate the reversed words into a single string separated by spaces.
+
+def reverseWords(s: str) -> str:
+    # Step 1: Trim leading/trailing spaces and split the string by spaces
+    words = s.strip().split()
+    # Step 2: Reverse the list of words
+    words.reverse()
+    # Step 3: Join the reversed words with a single space
+    return " ".join(words)
+
+# Example usage
+print(reverseWords("the sky is blue"))       # Output: "blue is sky the"
+print(reverseWords("  hello world  "))       # Output: "world hello"
+print(reverseWords("a good   example"))      # Output: "example good a"
