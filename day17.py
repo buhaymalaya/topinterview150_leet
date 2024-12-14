@@ -60,3 +60,9 @@ def convert(s: str, numRows: int) -> str:
     # Change direction if we reach the top or bottom row
         if current_row == 0 or current_row == numRows - 1:
             going_down = not going_down
+
+        # Move up or down the rows
+        current_row += 1 if going_down else -1
+
+    # Combine all rows into a single string and return
+    return "".join(rows)
