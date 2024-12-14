@@ -56,3 +56,7 @@ def convert(s: str, numRows: int) -> str:
     for char in s:
         # Add the character to the current row
         rows[current_row] += char
+
+    # Change direction if we reach the top or bottom row
+        if current_row == 0 or current_row == numRows - 1:
+            going_down = not going_down
