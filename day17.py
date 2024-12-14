@@ -51,3 +51,8 @@ def convert(s: str, numRows: int) -> str:
     # Initialize variables for the current row and direction
     current_row = 0
     going_down = False
+
+    # Iterate through the characters in the string
+    for char in s:
+        # Add the character to the current row
+        rows[current_row] += char
