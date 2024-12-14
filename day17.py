@@ -40,3 +40,14 @@
 #     s consists of English letters (lower-case and upper-case), ',' and '.'.
 #     1 <= numRows <= 1000
 
+def convert(s: str, numRows: int) -> str:
+    # Edge case: If the number of rows is 1, return the string as is
+    if numRows == 1 or numRows >= len(s):
+        return s
+
+    # Create a list of strings for each row
+    rows = ["" for _ in range(numRows)]
+
+    # Initialize variables for the current row and direction
+    current_row = 0
+    going_down = False
