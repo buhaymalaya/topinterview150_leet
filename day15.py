@@ -69,3 +69,7 @@ def fullJustify(words, maxWidth):
         # Check if adding this word would exceed maxWidth
         if line_length + len(word) + len(line) > maxWidth:
             # Distribute spaces for the current line
+
+            for i in range(maxWidth - line_length):
+                # Distribute extra spaces from left to right
+                line[i % (len(line) - 1 or 1)] += " "
