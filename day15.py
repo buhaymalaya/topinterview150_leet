@@ -64,3 +64,8 @@ def fullJustify(words, maxWidth):
     result = []  # Stores the final list of justified lines
     line = []  # Stores the current line's words
     line_length = 0
+
+    for word in words:
+        # Check if adding this word would exceed maxWidth
+        if line_length + len(word) + len(line) > maxWidth:
+            # Distribute spaces for the current line
