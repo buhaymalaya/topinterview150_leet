@@ -73,3 +73,8 @@ def fullJustify(words, maxWidth):
             for i in range(maxWidth - line_length):
                 # Distribute extra spaces from left to right
                 line[i % (len(line) - 1 or 1)] += " "
+
+            # Add the justified line to result
+            result.append("".join(line))
+            # Reset for the next line
+            line, line_length = [], 0
