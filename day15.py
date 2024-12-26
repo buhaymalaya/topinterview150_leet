@@ -59,3 +59,8 @@
 #     1 <= maxWidth <= 100
 #     words[i].length <= maxWidth
 
+
+def fullJustify(words, maxWidth):
+    result = []  # Stores the final list of justified lines
+    line = []  # Stores the current line's words
+    line_length = 0
