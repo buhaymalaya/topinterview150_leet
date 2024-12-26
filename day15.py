@@ -78,3 +78,11 @@ def fullJustify(words, maxWidth):
             result.append("".join(line))
             # Reset for the next line
             line, line_length = [], 0
+
+        # Add the current word to the line
+        line.append(word)
+        line_length += len(word)
+
+    # Handle the last line: Left-justified with spaces at the end
+    result.append(" ".join(line).ljust(maxWidth))
+    return result
