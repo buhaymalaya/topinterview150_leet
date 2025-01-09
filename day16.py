@@ -22,15 +22,22 @@
 #     1 <= haystack.length, needle.length <= 104
 #     haystack and needle consist of only lowercase English characters.
 
+# def strStr(haystack: str, needle: str) -> int:
+#     return haystack.find(needle)
+
+# # Example 1
+# haystack = "sadbutsad"
+# needle = "sad"
+# print(strStr(haystack, needle))  # Output: 0
+
+# # Example 2
+# haystack = "leetcode"
+# needle = "leeto"
+# print(strStr(haystack, needle))  # Output: -1
+
+
+
 def strStr(haystack: str, needle: str) -> int:
-    return haystack.find(needle)
-
-# Example 1
-haystack = "sadbutsad"
-needle = "sad"
-print(strStr(haystack, needle))  # Output: 0
-
-# Example 2
-haystack = "leetcode"
-needle = "leeto"
-print(strStr(haystack, needle))  # Output: -1
+    # Get the lengths of haystack and needle
+    haystack_len = len(haystack)
+    needle_len = len(needle)
