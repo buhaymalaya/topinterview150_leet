@@ -41,3 +41,13 @@ def strStr(haystack: str, needle: str) -> int:
     # Get the lengths of haystack and needle
     haystack_len = len(haystack)
     needle_len = len(needle)
+
+    # If the needle is longer than the haystack, it can't be found
+    if needle_len > haystack_len:
+        return -1
+
+    # Iterate through the haystack, checking each substring of the same length as the needle
+    for i in range(haystack_len - needle_len + 1):
+        # Check if the substring matches the needle
+        if haystack[i:i + needle_len] == needle:
+            return i
