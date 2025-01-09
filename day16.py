@@ -22,3 +22,5 @@
 #     1 <= haystack.length, needle.length <= 104
 #     haystack and needle consist of only lowercase English characters.
 
+def strStr(haystack: str, needle: str) -> int:
+    return haystack.find(needle)
