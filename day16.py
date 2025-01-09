@@ -24,3 +24,8 @@
 
 def strStr(haystack: str, needle: str) -> int:
     return haystack.find(needle)
+
+# Example 1
+haystack = "sadbutsad"
+needle = "sad"
+print(strStr(haystack, needle))  # Output: 0
