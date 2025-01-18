@@ -23,3 +23,7 @@
 #     0 <= strs[i].length <= 200
 #     strs[i] consists of only lowercase English letters.
 
+def longest_common_prefix(strs):
+    # If the input list is empty, return an empty string
+    if not strs:
+        return ""
