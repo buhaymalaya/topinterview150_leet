@@ -27,3 +27,7 @@ def longest_common_prefix(strs):
     # If the input list is empty, return an empty string
     if not strs:
         return ""
+    
+    # Find the shortest string in the array, as the common prefix cannot
+    # be longer than the shortest string
+    shortest = min(strs, key=len)
