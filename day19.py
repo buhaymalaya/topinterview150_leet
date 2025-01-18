@@ -31,3 +31,11 @@ def longest_common_prefix(strs):
     # Find the shortest string in the array, as the common prefix cannot
     # be longer than the shortest string
     shortest = min(strs, key=len)
+
+    # Initialize the prefix to the shortest string
+    for i in range(len(shortest)):
+        # Compare the characters of the shortest string with the others
+        for string in strs:
+            if string[i] != shortest[i]:
+                # If a mismatch is found, return the prefix up to that point
+                return shortest[:i]
