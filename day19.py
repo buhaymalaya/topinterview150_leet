@@ -39,3 +39,6 @@ def longest_common_prefix(strs):
             if string[i] != shortest[i]:
                 # If a mismatch is found, return the prefix up to that point
                 return shortest[:i]
+            
+     # If no mismatch is found, the entire shortest string is the prefix
+    return shortest
