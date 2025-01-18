@@ -42,3 +42,10 @@ def longest_common_prefix(strs):
             
      # If no mismatch is found, the entire shortest string is the prefix
     return shortest
+
+# Example usage:
+strs1 = ["flower", "flow", "flight"]
+strs2 = ["dog", "racecar", "car"]
+
+print(longest_common_prefix(strs1))  # Output: "fl"
+print(longest_common_prefix(strs2))  # Output: ""
