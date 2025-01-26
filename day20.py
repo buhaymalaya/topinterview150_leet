@@ -37,3 +37,7 @@ def length_of_last_word(s: str) -> int:
     words = s.strip().split()
     # Return the length of the last word
     return len(words[-1])
+
+s1 = "Hello World"
+s2 = "   fly me   to   the moon  "
+s3 = "luffy is still joyboy"
