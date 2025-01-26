@@ -45,3 +45,7 @@ s3 = "luffy is still joyboy"
 print(length_of_last_word(s1))  # Output: 5
 print(length_of_last_word(s2))  # Output: 4
 print(length_of_last_word(s3))  # Output: 6
+
+def length_of_last_word(s: str) -> int:
+    length = 0
+    i = len(s) - 1
