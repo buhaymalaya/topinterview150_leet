@@ -32,3 +32,8 @@
 #     s consists of only English letters and spaces ' '.
 #     There will be at least one word in s.
 
+def length_of_last_word(s: str) -> int:
+    # Strip any trailing spaces and split the string into words
+    words = s.strip().split()
+    # Return the length of the last word
+    return len(words[-1])
