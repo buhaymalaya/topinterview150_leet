@@ -60,3 +60,11 @@ def length_of_last_word(s: str) -> int:
         i -= 1
 
     return length
+
+s1 = "Hello World"
+s2 = "   fly me   to   the moon  "
+s3 = "luffy is still joyboy"
+
+print(length_of_last_word(s1))  # Output: 5
+print(length_of_last_word(s2))  # Output: 4
+print(length_of_last_word(s3))  # Output: 6
