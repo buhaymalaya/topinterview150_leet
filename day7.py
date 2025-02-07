@@ -73,3 +73,8 @@ print(f"Output: {k1}, nums = {nums1[:k1]}{['_' for _ in range(k1, len(nums1))]}"
 nums2 = [0, 0, 1, 1, 1, 1, 2, 3, 3]
 k2 = removeDuplicates(nums2)
 print(f"Output: {k2}, nums = {nums2[:k2]}{['_' for _ in range(k2, len(nums2))]}")
+
+
+def removeDuplicates(nums: list[int]) -> int:
+    # Initialize two pointers: one for the current position and one for result placement
+    k = 0
