@@ -78,3 +78,11 @@ print(f"Output: {k2}, nums = {nums2[:k2]}{['_' for _ in range(k2, len(nums2))]}"
 def removeDuplicates(nums: list[int]) -> int:
     # Initialize two pointers: one for the current position and one for result placement
     k = 0
+
+    for num in nums:
+        # Place the number if it's either one of the first two elements or not exceeding two occurrences
+        if k < 2 or num != nums[k - 2]:
+            nums[k] = num
+            k += 1
+
+    return k
