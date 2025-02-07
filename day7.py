@@ -54,3 +54,6 @@ def removeDuplicates(nums: list[int]) -> int:
     for i in range(len(nums)):
         # If at the start or current element differs from the previous
         if i == 0 or nums[i] != nums[i - 1]:
+            count = 1
+        else:
+            count += 1
