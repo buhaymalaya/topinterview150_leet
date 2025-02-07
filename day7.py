@@ -46,3 +46,7 @@
 #     -104 <= nums[i] <= 104
 #     nums is sorted in non-decreasing order.
 
+def removeDuplicates(nums: list[int]) -> int:
+    # Initialize the position pointer and count for occurrences
+    k = 0  # points to the position where the next element should be placed
+    count = 0  # counts occurrences of the current element
