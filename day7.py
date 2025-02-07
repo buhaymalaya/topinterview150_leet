@@ -50,3 +50,7 @@ def removeDuplicates(nums: list[int]) -> int:
     # Initialize the position pointer and count for occurrences
     k = 0  # points to the position where the next element should be placed
     count = 0  # counts occurrences of the current element
+
+    for i in range(len(nums)):
+        # If at the start or current element differs from the previous
+        if i == 0 or nums[i] != nums[i - 1]:
