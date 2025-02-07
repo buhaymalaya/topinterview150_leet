@@ -57,3 +57,10 @@ def removeDuplicates(nums: list[int]) -> int:
             count = 1
         else:
             count += 1
+
+    # Place the element if it appears at most twice
+        if count <= 2:
+            nums[k] = nums[i]
+            k += 1
+
+    return k
