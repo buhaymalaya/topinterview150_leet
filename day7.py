@@ -64,3 +64,8 @@ def removeDuplicates(nums: list[int]) -> int:
             k += 1
 
     return k
+
+# Example usage
+nums1 = [1, 1, 1, 2, 2, 3]
+k1 = removeDuplicates(nums1)
+print(f"Output: {k1}, nums = {nums1[:k1]}{['_' for _ in range(k1, len(nums1))]}")
