@@ -32,3 +32,6 @@
 #     1 <= m + n <= 2000
 #     -106 <= nums1[i], nums2[i] <= 106
 
+def findMedianSortedArrays(nums1, nums2):
+    if len(nums1) > len(nums2):  
+        nums1, nums2 = nums2, nums1  # Ensure nums1 is the smaller array
