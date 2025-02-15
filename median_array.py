@@ -39,3 +39,12 @@ def findMedianSortedArrays(nums1, nums2):
     m, n = len(nums1), len(nums2)
     left, right = 0, m
     half_len = (m + n + 1) // 2  # Ensure left part is larger if odd total
+
+    while left <= right:
+        i = (left + right) // 2  # Partition index for nums1
+        j = half_len - i  # Partition index for nums2
+
+        nums1_left = nums1[i-1] if i > 0 else float('-inf')
+        nums1_right = nums1[i] if i < m else float('inf')
+        nums2_left = nums2[j-1] if j > 0 else float('-inf')
+        nums2_right = nums2[j] if j < n else float('inf')
