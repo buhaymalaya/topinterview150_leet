@@ -48,3 +48,19 @@ def findMedianSortedArrays(nums1, nums2):
         nums1_right = nums1[i] if i < m else float('inf')
         nums2_left = nums2[j-1] if j > 0 else float('-inf')
         nums2_right = nums2[j] if j < n else float('inf')
+
+    
+    if nums1_left <= nums2_right and nums2_left <= nums1_right:
+            # Correct partition
+            if (m + n) % 2 == 1:
+                return max(nums1_left, nums2_left)  # Odd case
+            else:
+                return (max(nums1_left, nums2_left) + min(nums1_right, nums2_right)) / 2  # Even case
+    elif nums1_left > nums2_right:
+        right = i - 1  # Move left
+    else:
+        left = i + 1  # Move right
+
+# Test cases
+print(findMedianSortedArrays([1,3], [2]))      # Output: 2.0
+print(findMedianSortedArrays([1,2], [3,4]))    # Output: 2.5
