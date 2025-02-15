@@ -35,3 +35,7 @@
 def findMedianSortedArrays(nums1, nums2):
     if len(nums1) > len(nums2):  
         nums1, nums2 = nums2, nums1  # Ensure nums1 is the smaller array
+
+    m, n = len(nums1), len(nums2)
+    left, right = 0, m
+    half_len = (m + n + 1) // 2  # Ensure left part is larger if odd total
