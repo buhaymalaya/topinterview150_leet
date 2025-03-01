@@ -26,3 +26,18 @@
 #     1 <= prices.length <= 105
 #     0 <= prices[i] <= 104
 
+def maxProfit(prices):
+    min_price = float('inf')
+    max_profit = 0
+
+    for price in prices:
+        if price < min_price:
+            min_price = price  # update min
+        else:
+            max_profit = max(max_profit, price - min_price)  # calc profit
+
+    return max_profit
+
+# Example test cases
+print(maxProfit([7,1,5,3,6,4]))  # 5
+print(maxProfit([7,6,4,3,1]))    # 0
