@@ -28,3 +28,19 @@
 #     0 <= nums[i] <= 1000
 #     It's guaranteed that you can reach nums[n - 1].
 
+def jump(nums):
+    jumps = 0
+    farthest = 0
+    end = 0
+    
+    for i in range(len(nums) - 1):
+        farthest = max(farthest, i + nums[i])
+        if i == end:
+            jumps += 1
+            end = farthest
+
+    return jumps
+
+# Example test cases
+print(jump([2,3,1,1,4]))  # 2
+print(jump([2,3,0,1,4]))  # 2
