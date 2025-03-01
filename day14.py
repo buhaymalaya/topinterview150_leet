@@ -34,3 +34,42 @@
 #     At most 2 * 105 calls will be made to insert, remove, and getRandom.
 #     There will be at least one element in the data structure when getRandom is called.
 
+import random
+
+class RandomizedSet:
+    def __init__(self):
+        self.data = []
+        self.index_map = {}
+
+    def insert(self, val):
+        if val in self.index_map:
+            return False
+        self.index_map[val] = len(self.data)
+        self.data.append(val)
+        return True
+
+    def remove(self, val):
+        if val not in self.index_map:
+            return False
+        index = self.index_map[val]
+        last_element = self.data[-1]
+        
+        self.data[index] = last_element
+        self.index_map[last_element] = index
+        
+        self.data.pop()
+        del self.index_map[val]
+        return True
+
+    def getRandom(self):
+        return random.choice(self.data)
+
+# Example usage
+randomizedSet = RandomizedSet()
+print(randomizedSet.insert(1))  # True
+print(randomizedSet.remove(2))  # False
+print(randomizedSet.insert(2))  # True
+print(randomizedSet.getRandom())  # 1 or 2
+print(randomizedSet.remove(1))  # True
+print(randomizedSet.insert(2))  # False
+print(randomizedSet.getRandom())  # 2
