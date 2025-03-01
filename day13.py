@@ -24,3 +24,16 @@
 #     1 <= n <= 5000
 #     0 <= citations[i] <= 1000
 
+def hIndex(citations):
+    citations.sort(reverse=True)
+    h = 0
+    for i, c in enumerate(citations):
+        if c >= i + 1:
+            h = i + 1
+        else:
+            break
+    return h
+
+# Example test cases
+print(hIndex([3,0,6,1,5]))  # 3
+print(hIndex([1,3,1]))      # 1
